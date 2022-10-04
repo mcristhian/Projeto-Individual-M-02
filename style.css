@@ -22,3 +22,7 @@ main {
 .visibilidade_incremento {
     display: none;
 }
+
+#incremento {
+    width: 2rem;
+}
