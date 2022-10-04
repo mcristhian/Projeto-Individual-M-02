@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: dimgray;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+
+.principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visibilidade_incremento {
+    display: none;
+}
