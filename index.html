@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mensagem oculta</title>
-    <script src="./main.js"></script>
+    <script src="./main.js" defer></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
                     <select name="forma" id="forma">
                         <option value="padrao" disabled selected>Selecione</option>
                         <option value="cesar" id="cesar">Cifra de César</option>
-                        <option value="base_64">Base64</option>
+                        <option value="base_64" id="base64">Base64</option>
                     </select><br><br>
 
                     <div class="visibilidade_incremento">
@@ -30,7 +30,8 @@
                         <input type="number" id="incremento" name="incremento" default="0" min="1" value="1">
                     </div>
 
-                    <input type="text" id="mensagem" name="mensagem" placeholder="Digite sua mensagem"><br><br>
+                    <input type="text" id="mensagem" name="mensagem" placeholder="Digite sua mensagem">
+                    <button>Copiar</button><br><br>
                     
                     <input type="radio" id="codificar" name="procedimento" value="Codificar">
                     <label for="codificar">Codificar</label>
@@ -41,6 +42,7 @@
                     <input type="button" value="Codificar"><br><br>
 
                     <textarea name="resultado" id="resultado" cols="25" rows="3" disabled placeholder="O resultado será exibido aqui"></textarea>
+                    <button>Copiar</button>
                 </fieldset>
             </form>
         </div>

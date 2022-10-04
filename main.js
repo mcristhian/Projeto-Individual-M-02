@@ -1,9 +1,16 @@
-const select_forma = document.querySelector('#cesar');
+const select_forma = document.querySelector('#forma');
+// const valor_forma = document.querySelector('');
+// console.log(select_forma);
 
-select_forma.addEventListener('click', RespondClick);
+select_forma.addEventListener('change', (f) => {
+    f.preventDefault();
 
-function RespondClick(){
-    let texto = document.createElement('p');
-    texto.innerText = 'Testando';
-    document.body.append(texto);
-}
+    if (select_forma.value == 'cesar'){
+        console.log('positivo');
+        document.querySelector('.visibilidade_incremento').style.display = 'flex';
+
+    } else {
+        console.log('falso');
+        document.querySelector('.visibilidade_incremento').style.display = 'none';
+    }
+})
