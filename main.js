@@ -1,6 +1,6 @@
 const select_forma = document.querySelector('#forma');
-// const valor_forma = document.querySelector('');
-// console.log(select_forma);
+const procedimento_c = document.querySelector('#codificar');
+const procedimento_d = document.querySelector('#decodificar');
 
 select_forma.addEventListener('change', (f) => {
     f.preventDefault();
@@ -13,4 +13,14 @@ select_forma.addEventListener('change', (f) => {
         console.log('falso');
         document.querySelector('.visibilidade_incremento').style.display = 'none';
     }
+})
+
+procedimento_c.addEventListener('click', (f) => {
+    //f.preventDefault();
+
+    document.querySelector('#botao_envio').value = 'Codificar mensagem!';
+})
+
+procedimento_d.addEventListener('click', (f) => {
+    document.querySelector('#botao_envio').value = 'Decodificar mensagem!'
 })
