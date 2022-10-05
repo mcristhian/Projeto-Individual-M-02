@@ -19,7 +19,7 @@ procedimento_c.addEventListener('click', (f) => {
 })
 
 procedimento_d.addEventListener('click', (f) => {
-    document.querySelector('#botao_envio').value = 'Decodificar mensagem!'
+    document.querySelector('#botao_envio').value = 'Decodificar mensagem!';
 })
 
 envio.addEventListener('click', (cifra_de_cesar) => {
@@ -32,9 +32,17 @@ envio.addEventListener('click', (cifra_de_cesar) => {
         
         for(let i=0; i < mensagem.length; i++){
             let posicao = alfabeto.indexOf(mensagem[i]);
-            
+
             if (alfabeto.includes(mensagem[i])){
-                mensagem_criptografada += alfabeto[posicao + chave];
+                let limite = posicao + chave;
+                if (limite >= alfabeto.length){
+                    mensagem_criptografada += alfabeto[(posicao - alfabeto.length) + chave];
+
+                    // let teste = (posicao - alfabeto.length) + chave
+                    // console.log(teste);
+                } else {
+                    mensagem_criptografada += alfabeto[posicao + chave];
+                }
             } else {
                 mensagem_criptografada += mensagem[i];
             }
@@ -49,7 +57,15 @@ envio.addEventListener('click', (cifra_de_cesar) => {
             let posicao = alfabeto.indexOf(mensagem[i]);
             
             if (alfabeto.includes(mensagem[i])){
-                mensagem_descriptografada += alfabeto[posicao - chave];
+                let limite = posicao - chave;
+                if (limite <= 0){
+                    mensagem_descriptografada += alfabeto[(posicao + alfabeto.length) - chave];
+
+                    let teste = (posicao + alfabeto.length) - chave;
+                    console.log(teste);
+                } else {
+                    mensagem_descriptografada += alfabeto[posicao - chave];
+                }
             } else {
                 mensagem_descriptografada += mensagem[i];
             }
@@ -57,3 +73,6 @@ envio.addEventListener('click', (cifra_de_cesar) => {
         document.querySelector('#resultado').value = mensagem_descriptografada;
     }
 })
+
+
+
