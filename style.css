@@ -4,19 +4,22 @@
 
 body {
     background-color: dimgray;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 main {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 15%;
+    align-items: center; */
+    margin-top: 5%;
 }
 
-.principal {
-    display: flex;
+#principal {
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 .visibilidade_incremento {
@@ -29,4 +32,22 @@ main {
 
 #mensagem {
     width: 11.5rem;
+}
+
+#informacao {
+    background-color: gray;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+#enigma {
+    display: flex;
+    justify-content: center;
+}
+
+#foto {
+    width: 5rem;
+    height: 5rem;
 }
